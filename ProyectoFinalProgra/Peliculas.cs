@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalProgra
 {
-    class Peliculas
+    class Peliculas : Series
     {
+        public string Director { get; set; }
+        public string Sinopsis { get; set; }
     }
 }

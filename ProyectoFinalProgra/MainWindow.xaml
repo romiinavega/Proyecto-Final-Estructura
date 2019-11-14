@@ -8,19 +8,20 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Peliculas y series" HorizontalAlignment="Left" Margin="38,24,0,0" VerticalAlignment="Top" Width="202" Height="42" FontSize="18"/>
-        <ListView HorizontalAlignment="Left" Height="217" Margin="38,71,0,0" VerticalAlignment="Top" Width="162">
+        <ListView x:Name="list" HorizontalAlignment="Left" Height="217" Margin="28,82,0,0" VerticalAlignment="Top" Width="212">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Pelicula o Serie" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Año}" Header="Año" Width="120"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Ordenar A - Z" HorizontalAlignment="Left" Margin="38,320,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
-        <Button Content="Ordenar Z - A" HorizontalAlignment="Left" Margin="156,320,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
-        <Button Content="Guardar nuevo elemento" HorizontalAlignment="Left" Margin="312,328,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="502,328,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
-        <DataGrid HorizontalAlignment="Left" Height="217" Margin="266,98,0,0" VerticalAlignment="Top" Width="436"/>
-        <Button Content="Nuevo elemento" HorizontalAlignment="Left" Margin="266,40,0,0" VerticalAlignment="Top" Width="111" Height="26"/>
+        <Button x:Name="botonL1" Content="Ordenar A - Z" HorizontalAlignment="Left" Margin="38,320,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
+        <Button x:Name="botonL2" Content="Ordenar Z - A" HorizontalAlignment="Left" Margin="38,351,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
+        <Button x:Name="nuevoelemento" Content="Nuevo elemento" HorizontalAlignment="Left" Margin="266,40,0,0" VerticalAlignment="Top" Width="111" Height="26" Click="nuevoelemento_Click"/>
+        <Button x:Name="botonN1" Content="1 - 10" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN1_Click"/>
+        <Button x:Name="botonN2" Content="10 - 1" HorizontalAlignment="Left" Margin="146,351,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN2_Click"/>
+        <Grid x:Name="gridN" HorizontalAlignment="Left" Height="217" Margin="289,92,0,0" VerticalAlignment="Top" Width="465"/>
 
     </Grid>
 </Window>
