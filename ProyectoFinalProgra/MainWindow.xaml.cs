@@ -217,7 +217,9 @@ namespace ProyectoFinalProgra
           
             var usuario = ((visualizar)(gridN.Children[0]));
             var clase = multi[list.SelectedIndex];
-
+            var año = clase.Año.ToString();
+            var año2 = Convert.ToInt32(((visualizar)(gridN.Children[0])).lblaño.Text);
+            multi[list.SelectedIndex].Año = año2;
             clase.Titulo = usuario.lbltitulo.Text;
             clase.Sinopsis = usuario.lblsinopsis.Text;
             clase.Temporadas = usuario.lbltemporadas.Text;
