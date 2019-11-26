@@ -25,11 +25,11 @@ namespace ProyectoFinalProgra
         public MainWindow()
         {
             InitializeComponent();
-          multi.Add(new Multimedia("Hola", 2010, "miedo", "sinopsis11", "1","hola", "3"));
-            multi.Add(new Multimedia("Si", 2015, "terror", "sinopsis2", "2" ,"adios", "3"));
-            multi.Add(new Multimedia("Adios", 2020, "terror", "sinopsis3","3", "si", "1"));
+            multi.Add(new Multimedia("Hola", 2010, "miedo", "sinopsis11", "1", "hola", "3"));
+            multi.Add(new Multimedia("Si", 2015, "terror", "sinopsis2", "2", "adios", "3"));
+            multi.Add(new Multimedia("Adios", 2020, "terror", "sinopsis3", "3", "si", "1"));
             list.ItemsSource = multi;
-             
+
 
 
 
@@ -44,12 +44,12 @@ namespace ProyectoFinalProgra
             botonN2.Visibility = Visibility.Hidden;
             botonL1.Visibility = Visibility.Hidden;
             botonL2.Visibility = Visibility.Hidden;
-            
+
         }
 
         private void botonN1_Click(object sender, RoutedEventArgs e)
         {
-            { 
+            {
                 int gap, i;
                 gap = multi.Count / 2;
 
@@ -109,7 +109,40 @@ namespace ProyectoFinalProgra
             //var hola= gridprincipal.Children.Add(new Agregar().txtaño.Text);
 
             eliminar.Visibility = Visibility.Visible;
-            //editar.Visibility = Visibility.Visible;
+            editar.Visibility = Visibility.Visible;
+            ((visualizar)(gridN.Children[0])).lbltitulo.Text = multi[list.SelectedIndex].Titulo;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Sinopsis;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Descripcion;
+            ((visualizar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Director;
+            ((visualizar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Productor;
+            ((visualizar)(gridN.Children[0])).lblgenero.Text = multi[list.SelectedIndex].Genero;
+            ((visualizar)(gridN.Children[0])).lbltemporadas.Text = multi[list.SelectedIndex].Temporadas;
+            ((visualizar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
+            ((visualizar)(gridN.Children[0])).lblaño.Text = multi[list.SelectedIndex].Año.ToString();
+            botonN1.Visibility = Visibility.Hidden;
+            botonN2.Visibility = Visibility.Hidden;
+            botonL1.Visibility = Visibility.Hidden;
+            botonL2.Visibility = Visibility.Hidden;
+
+
+        }
+
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        { //eliminar
+            if (list.SelectedIndex != -1)
+            {
+                multi.RemoveAt(list.SelectedIndex);
+            }
+        }
+
+
+
+        private void editar_Click(object sender, RoutedEventArgs e)
+        {
+            gridN.Children.Clear();
+            gridN.Children.Add(new visualizar());
             ((visualizar)(gridN.Children[0])).lbltitulo.Text = multi[list.SelectedIndex].Titulo;
             ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Sinopsis;
             ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Descripcion;
@@ -120,45 +153,34 @@ namespace ProyectoFinalProgra
             ((visualizar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
             ((visualizar)(gridN.Children[0])).lblaño.Text = multi[list.SelectedIndex].Año.ToString();
 
-
-
+            ((visualizar)(gridN.Children[0])).lbltitulo.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblproduccion.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblproduccion.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblgenero.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lbltemporadas.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblrating.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).lblaño.IsEnabled = true;
+            actualizar.Visibility = Visibility.Visible;
+            
         }
 
-       
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void actualizar_Click(object sender, RoutedEventArgs e)
         {
-            if (list.SelectedIndex != -1)
-            {
-                multi.RemoveAt(list.SelectedIndex);
-            }
-        }
+          
+            var usuario = ((visualizar)(gridN.Children[0]));
+            var clase = multi[list.SelectedIndex];
 
-         private void Button_Click_2(object sender, RoutedEventArgs e)
+            usuario.lbltitulo = clase.Titulo.Text;
+
+
+           }
+
+        private void botonL1_Click(object sender, RoutedEventArgs e)
         {
 
-
         }
-         /*
-             gridN2.Children.Add(new editar());
-             ((editar)(gridN.Children[0])).lbltitulo.Text = multi[list.SelectedIndex].Titulo;
-             ((editar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Sinopsis;
-             ((editar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Descripcion;
-             ((editar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Director;
-             ((editar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Productor;
-             ((editar)(gridN.Children[0])).lblgenero.Text = multi[list.SelectedIndex].Genero;
-             ((editar)(gridN.Children[0])).lbltemporadas.Text = multi[list.SelectedIndex].Temporadas;
-             ((editar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
-       */
     }
 }
-
-        /*   private void Button_Click(object sender, RoutedEventArgs e)
-        {
-         multi.Add(new Series(txtbox1.Text, txtbox2.Text, txtbox3.Text, txtbox4.Text, txtbox5.Text, txtbox6.Text));
-            txtbox1.Text = "";
-            txtbox2.Text = "";
-            txtbox3.Text = "";
-        }
-    }*/
 

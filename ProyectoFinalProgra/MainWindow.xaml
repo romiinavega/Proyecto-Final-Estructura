@@ -16,14 +16,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="botonL1" Content="Ordenar A - Z" HorizontalAlignment="Left" Margin="38,320,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
+        <Button x:Name="botonL1" Content="Ordenar A - Z" HorizontalAlignment="Left" Margin="38,320,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonL1_Click"/>
         <Button x:Name="botonL2" Content="Ordenar Z - A" HorizontalAlignment="Left" Margin="38,351,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
         <Button x:Name="nuevoelemento" Content="Nuevo elemento" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" Width="111" Height="26" Click="nuevoelemento_Click"/>
         <Button x:Name="botonN1" Content="1 - 10" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN1_Click"/>
         <Button x:Name="botonN2" Content="10 - 1" HorizontalAlignment="Left" Margin="146,351,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN2_Click"/>
         <Grid x:Name="gridN" HorizontalAlignment="Left" Height="280" Margin="255,60,0,0" VerticalAlignment="Top" Width="503"/>
-        <Button x:Name="eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="268,357,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden" Click="Button_Click_1"/>
+        <Button x:Name="eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="331,305,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden" Click="Button_Click_1"/>
         <Grid x:Name="gridN2" Visibility="Hidden" HorizontalAlignment="Left" Height="280" Margin="255,60,0,0" VerticalAlignment="Top" Width="503"/>
+        <Button  x:Name="editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="448,305,0,0" VerticalAlignment="Top" Width="76" Click="editar_Click"/>
+        <Button x:Name="actualizar" Visibility="Hidden" Content="Actualizar" HorizontalAlignment="Left" Margin="570,305,0,0" VerticalAlignment="Top" Width="76" Click="actualizar_Click"/>
 
     </Grid>
 </Window>
