@@ -29,7 +29,11 @@ namespace ProyectoFinalProgra
             multi.Add(new Multimedia("Si", 2015, "terror", "sinopsis2", "2", "adios", "3"));
             multi.Add(new Multimedia("Adios", 2020, "terror", "sinopsis3", "3", "si", "1"));
             list.ItemsSource = multi;
-
+            estrella1.Visibility = Visibility.Hidden;
+            estrella2.Visibility = Visibility.Hidden;
+            estrella3.Visibility = Visibility.Hidden;
+            estrella4.Visibility = Visibility.Hidden;
+            estrella5.Visibility = Visibility.Hidden;
 
 
 
@@ -39,7 +43,9 @@ namespace ProyectoFinalProgra
 
         private void nuevoelemento_Click(object sender, RoutedEventArgs e)
         {
+            gridN.Children.Clear();
             gridN.Children.Add(new Nuevo_elemento());
+            cancelar.Visibility = Visibility.Visible;
             botonN1.Visibility = Visibility.Hidden;
             botonN2.Visibility = Visibility.Hidden;
             botonL1.Visibility = Visibility.Hidden;
@@ -123,8 +129,48 @@ namespace ProyectoFinalProgra
             botonN2.Visibility = Visibility.Hidden;
             botonL1.Visibility = Visibility.Hidden;
             botonL2.Visibility = Visibility.Hidden;
+            cancelar.Visibility = Visibility.Visible;
 
-
+            if (((visualizar)(gridN.Children[0])).lblrating.Text == "1")
+            {
+                estrella1.Visibility = Visibility.Visible;
+                estrella2.Visibility = Visibility.Hidden;
+                estrella3.Visibility = Visibility.Hidden;
+                estrella4.Visibility = Visibility.Hidden;
+                estrella5.Visibility = Visibility.Hidden;
+            }
+            if (((visualizar)(gridN.Children[0])).lblrating.Text == "2")
+            {
+                estrella2.Visibility = Visibility.Visible;
+                estrella1.Visibility = Visibility.Hidden;
+                estrella3.Visibility = Visibility.Hidden;
+                estrella4.Visibility = Visibility.Hidden;
+                estrella5.Visibility = Visibility.Hidden;
+            }
+                if (((visualizar)(gridN.Children[0])).lblrating.Text == "3")
+            {
+                estrella3.Visibility = Visibility.Visible;
+                estrella2.Visibility = Visibility.Hidden;
+                estrella1.Visibility = Visibility.Hidden;
+                estrella4.Visibility = Visibility.Hidden;
+                estrella5.Visibility = Visibility.Hidden;
+            }
+            if (((visualizar)(gridN.Children[0])).lblrating.Text == "4")
+            {
+                estrella4.Visibility = Visibility.Visible;
+                estrella2.Visibility = Visibility.Hidden;
+                estrella3.Visibility = Visibility.Hidden;
+                estrella1.Visibility = Visibility.Hidden;
+                estrella5.Visibility = Visibility.Hidden;
+            }
+            if (((visualizar)(gridN.Children[0])).lblrating.Text == "5")
+            {
+                estrella5.Visibility = Visibility.Visible;
+                estrella2.Visibility = Visibility.Hidden;
+                estrella3.Visibility = Visibility.Hidden;
+                estrella4.Visibility = Visibility.Hidden;
+                estrella1.Visibility = Visibility.Hidden;
+            }
         }
 
 
@@ -180,13 +226,49 @@ namespace ProyectoFinalProgra
             clase.Descripcion = usuario.lblsinopsis.Text;
 
             list.Items.Refresh();
-
+            
 
            }
 
         private void botonL1_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void guardar_Click(object sender, RoutedEventArgs e)
+        {
+
+            var usuario = ((Serie)(gridN.Children[0]));
+              var clase = multi[list.SelectedIndex];
+
+              clase.Titulo = usuario.lbltitulo.Text;
+              clase.Sinopsis = usuario.lblsinopsis.Text;
+              clase.Temporadas = usuario.lbltemporadas.Text;
+              clase.Ranting = usuario.lblrating.Text;
+              clase.Productor = usuario.lblproductor.Text;
+              clase.Descripcion = usuario.lblsinopsis.Text;
+
+            
+              list.Items.Refresh();
+
+            
+            
+
+        }
+
+       
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            gridN.Children.Clear();
+            botonN1.Visibility = Visibility.Visible;
+            botonN2.Visibility = Visibility.Visible;
+            botonL1.Visibility = Visibility.Visible;
+            botonL2.Visibility = Visibility.Visible;
+            cancelar.Visibility = Visibility.Hidden;
+            eliminar.Visibility = Visibility.Hidden;
+            editar.Visibility = Visibility.Hidden;
+           // guardar.Visibility = Visibility.Hidden;
+            
         }
     }
 }

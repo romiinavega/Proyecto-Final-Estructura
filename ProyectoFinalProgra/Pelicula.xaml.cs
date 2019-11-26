@@ -20,9 +20,15 @@ namespace ProyectoFinalProgra
     /// </summary>
     public partial class Pelicula : UserControl
     {
+        
         public Pelicula()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardarAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

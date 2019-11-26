@@ -26,6 +26,12 @@
         <Grid x:Name="gridN2" Visibility="Hidden" HorizontalAlignment="Left" Height="280" Margin="255,60,0,0" VerticalAlignment="Top" Width="503"/>
         <Button  x:Name="editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="448,305,0,0" VerticalAlignment="Top" Width="76" Click="editar_Click"/>
         <Button x:Name="actualizar" Visibility="Hidden" Content="Actualizar" HorizontalAlignment="Left" Margin="570,305,0,0" VerticalAlignment="Top" Width="76" Click="actualizar_Click"/>
+        <Button Content="Cancelar" Visibility="Hidden" x:Name="cancelar" HorizontalAlignment="Left" Margin="572,354,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click_2"/>
+        <Image x:Name="estrella1" Visibility="Hidden" Margin="279,256,385,135" Source="1.png" Stretch="Fill"/>
+        <Image x:Name="estrella2" Visibility="Hidden" Margin="276,262,385,135" Source="2.png" Stretch="Fill"/>
+        <Image x:Name="estrella3" Visibility="Hidden" Margin="276,262,385,135" Source="3.png" Stretch="Fill"/>
+        <Image x:Name="estrella4" Visibility="Hidden" Margin="271,262,390,135" Source="4.png" Stretch="Fill"/>
+        <Image x:Name="estrella5" Visibility="Hidden" Margin="276,262,385,135" Source="5.png" Stretch="Fill"/>
 
     </Grid>
 </Window>

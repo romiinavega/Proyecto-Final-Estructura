@@ -23,6 +23,7 @@ namespace ProyectoFinalProgra
         public Nuevo_elemento()
         {
             InitializeComponent();
+            
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
