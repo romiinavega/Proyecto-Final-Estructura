@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalProgra
 {
-    class Multimedia : Peliculas
+    class Multimedia : Peliculas 
     {
-        public Multimedia(string titulo, int año, string genero, int temporadas, string productor, string descripcion, int ranting)
+        public Multimedia(string titulo, int año, string genero, string descripcion, string temporadas, string productor, string ranting)
 
         {
             this.Titulo = titulo;
@@ -20,7 +20,7 @@ namespace ProyectoFinalProgra
             this.Ranting = ranting;
          }
 
-        public Multimedia(string titulo, int año, string sinopsis, string genero, string director, int ranting)
+        public Multimedia(string titulo, int año, string genero, string sinopsis, string director, string ranting)
         {
             this.Sinopsis = sinopsis;
             this.Titulo = titulo;

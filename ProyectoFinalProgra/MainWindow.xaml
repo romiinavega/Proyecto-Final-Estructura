@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Peliculas y series" HorizontalAlignment="Left" Margin="38,24,0,0" VerticalAlignment="Top" Width="202" Height="42" FontSize="18"/>
-        <ListView x:Name="list" HorizontalAlignment="Left" Height="217" Margin="28,82,0,0" VerticalAlignment="Top" Width="212">
+        <ListView x:Name="list" HorizontalAlignment="Left" Height="217" Margin="28,82,0,0" VerticalAlignment="Top" Width="212" SelectionChanged="list_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Pelicula o Serie" Width="120"></GridViewColumn>
@@ -18,10 +18,12 @@
         </ListView>
         <Button x:Name="botonL1" Content="Ordenar A - Z" HorizontalAlignment="Left" Margin="38,320,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
         <Button x:Name="botonL2" Content="Ordenar Z - A" HorizontalAlignment="Left" Margin="38,351,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
-        <Button x:Name="nuevoelemento" Content="Nuevo elemento" HorizontalAlignment="Left" Margin="266,40,0,0" VerticalAlignment="Top" Width="111" Height="26" Click="nuevoelemento_Click"/>
+        <Button x:Name="nuevoelemento" Content="Nuevo elemento" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" Width="111" Height="26" Click="nuevoelemento_Click"/>
         <Button x:Name="botonN1" Content="1 - 10" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN1_Click"/>
         <Button x:Name="botonN2" Content="10 - 1" HorizontalAlignment="Left" Margin="146,351,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="botonN2_Click"/>
-        <Grid x:Name="gridN" HorizontalAlignment="Left" Height="217" Margin="289,92,0,0" VerticalAlignment="Top" Width="465"/>
+        <Grid x:Name="gridN" HorizontalAlignment="Left" Height="280" Margin="255,60,0,0" VerticalAlignment="Top" Width="503"/>
+        <Button x:Name="eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="268,357,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden" Click="Button_Click_1"/>
+        <Grid x:Name="gridN2" Visibility="Hidden" HorizontalAlignment="Left" Height="280" Margin="255,60,0,0" VerticalAlignment="Top" Width="503"/>
 
     </Grid>
 </Window>

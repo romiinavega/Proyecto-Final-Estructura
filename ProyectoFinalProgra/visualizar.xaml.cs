@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace ProyectoFinalProgra
 {
     /// <summary>
-    /// Lógica de interacción para Serie.xaml
+    /// Lógica de interacción para visualizar.xaml
     /// </summary>
-    public partial class Serie : UserControl
+    public partial class visualizar : UserControl
     {
-        public Serie()
+        public visualizar()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

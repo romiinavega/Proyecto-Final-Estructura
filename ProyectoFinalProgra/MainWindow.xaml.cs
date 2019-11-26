@@ -25,10 +25,16 @@ namespace ProyectoFinalProgra
         public MainWindow()
         {
             InitializeComponent();
-            multi.Add(new Multimedia("Hola", 2010, "sinopsis", "miedo", "hola", 3));
-            multi.Add(new Multimedia("Si", 2015, "sinopsis", "terror", "adios", 3));
-            multi.Add(new Multimedia("Adios", 2020, "sinopsis", "terror", "si", 3));
+          multi.Add(new Multimedia("Hola", 2010, "miedo", "sinopsis11", "1","hola", "3"));
+            multi.Add(new Multimedia("Si", 2015, "terror", "sinopsis2", "2" ,"adios", "3"));
+            multi.Add(new Multimedia("Adios", 2020, "terror", "sinopsis3","3", "si", "1"));
             list.ItemsSource = multi;
+             
+
+
+
+
+
         }
 
         private void nuevoelemento_Click(object sender, RoutedEventArgs e)
@@ -38,6 +44,7 @@ namespace ProyectoFinalProgra
             botonN2.Visibility = Visibility.Hidden;
             botonL1.Visibility = Visibility.Hidden;
             botonL2.Visibility = Visibility.Hidden;
+            
         }
 
         private void botonN1_Click(object sender, RoutedEventArgs e)
@@ -93,5 +100,65 @@ namespace ProyectoFinalProgra
 
             }
         }
+
+        private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            gridN.Children.Clear();
+            gridN.Children.Add(new visualizar());
+            // (((Agregar)(gridprincipal.Children)).txtaño.Text);
+            //var hola= gridprincipal.Children.Add(new Agregar().txtaño.Text);
+
+            eliminar.Visibility = Visibility.Visible;
+            //editar.Visibility = Visibility.Visible;
+            ((visualizar)(gridN.Children[0])).lbltitulo.Text = multi[list.SelectedIndex].Titulo;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Sinopsis;
+            ((visualizar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Descripcion;
+            ((visualizar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Director;
+            ((visualizar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Productor;
+            ((visualizar)(gridN.Children[0])).lblgenero.Text = multi[list.SelectedIndex].Genero;
+            ((visualizar)(gridN.Children[0])).lbltemporadas.Text = multi[list.SelectedIndex].Temporadas;
+            ((visualizar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
+            ((visualizar)(gridN.Children[0])).lblaño.Text = multi[list.SelectedIndex].Año.ToString();
+
+
+
+        }
+
+       
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (list.SelectedIndex != -1)
+            {
+                multi.RemoveAt(list.SelectedIndex);
+            }
+        }
+
+         private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+
+        }
+         /*
+             gridN2.Children.Add(new editar());
+             ((editar)(gridN.Children[0])).lbltitulo.Text = multi[list.SelectedIndex].Titulo;
+             ((editar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Sinopsis;
+             ((editar)(gridN.Children[0])).lblsinopsis.Text = multi[list.SelectedIndex].Descripcion;
+             ((editar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Director;
+             ((editar)(gridN.Children[0])).lblproduccion.Text = multi[list.SelectedIndex].Productor;
+             ((editar)(gridN.Children[0])).lblgenero.Text = multi[list.SelectedIndex].Genero;
+             ((editar)(gridN.Children[0])).lbltemporadas.Text = multi[list.SelectedIndex].Temporadas;
+             ((editar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
+       */
     }
 }
+
+        /*   private void Button_Click(object sender, RoutedEventArgs e)
+        {
+         multi.Add(new Series(txtbox1.Text, txtbox2.Text, txtbox3.Text, txtbox4.Text, txtbox5.Text, txtbox6.Text));
+            txtbox1.Text = "";
+            txtbox2.Text = "";
+            txtbox3.Text = "";
+        }
+    }*/
+

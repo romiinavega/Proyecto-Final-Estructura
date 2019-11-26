@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="editar.xaml.cs">
+      <DependentUpon>editar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Multimedia.cs" />
     <Compile Include="Pelicula.xaml.cs">
       <DependentUpon>Pelicula.xaml</DependentUpon>
@@ -64,6 +67,13 @@
       <DependentUpon>Serie.xaml</DependentUpon>
     </Compile>
     <Compile Include="Series.cs" />
+    <Compile Include="visualizar.xaml.cs">
+      <DependentUpon>visualizar.xaml</DependentUpon>
+    </Compile>
+    <Page Include="editar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Serie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="visualizar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
