@@ -214,7 +214,7 @@ namespace ProyectoFinalProgra
 
         private void actualizar_Click(object sender, RoutedEventArgs e)
         {
-          
+            
             var usuario = ((visualizar)(gridN.Children[0]));
             var clase = multi[list.SelectedIndex];
             var año = clase.Año.ToString();
@@ -228,13 +228,43 @@ namespace ProyectoFinalProgra
             clase.Descripcion = usuario.lblsinopsis.Text;
 
             list.Items.Refresh();
-            
+            gridN.Children.Clear();
+            estrella1.Visibility = Visibility.Hidden;
+            estrella2.Visibility = Visibility.Hidden;
+            estrella3.Visibility = Visibility.Hidden;
+            estrella4.Visibility = Visibility.Hidden;
+            estrella5.Visibility = Visibility.Hidden;
+            botonN1.Visibility = Visibility.Visible;
+            botonN2.Visibility = Visibility.Visible;
+            botonL1.Visibility = Visibility.Visible;
+            botonL2.Visibility = Visibility.Visible;
+            cancelar.Visibility = Visibility.Hidden;
+            eliminar.Visibility = Visibility.Hidden;
+            editar.Visibility = Visibility.Hidden;
+            actualizar.Visibility = Visibility.Hidden;
 
-           }
+        }
 
         private void botonL1_Click(object sender, RoutedEventArgs e)
         {
+            bool swap;
 
+
+            do
+            {
+                swap = false;
+                for (int index = 0; index < (multi.Count - 1); index++)
+                {
+                    if (string.Compare(multi[index].Titulo, multi[index + 1].Titulo) > 0)
+                    {
+                        var temp = multi[index];
+                        multi[index] = multi[index + 1];
+                        multi[index + 1] = temp;
+                        swap = true;
+                    }
+
+                }
+            } while (swap == true);
         }
 
         private void guardar_Click(object sender, RoutedEventArgs e)
@@ -260,8 +290,13 @@ namespace ProyectoFinalProgra
 
        
         private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
+        { //cancelar
             gridN.Children.Clear();
+            estrella1.Visibility = Visibility.Hidden;
+            estrella2.Visibility = Visibility.Hidden;
+            estrella3.Visibility = Visibility.Hidden;
+            estrella4.Visibility = Visibility.Hidden;
+            estrella5.Visibility = Visibility.Hidden;
             botonN1.Visibility = Visibility.Visible;
             botonN2.Visibility = Visibility.Visible;
             botonL1.Visibility = Visibility.Visible;
@@ -271,6 +306,28 @@ namespace ProyectoFinalProgra
             editar.Visibility = Visibility.Hidden;
            // guardar.Visibility = Visibility.Hidden;
             
+        }
+
+        private void botonL2_Click(object sender, RoutedEventArgs e)
+        {
+            bool swap;
+
+
+            do
+            {
+                swap = false;
+                for (int index = 0; index < (multi.Count - 1); index++)
+                {
+                    if (string.Compare(multi[index].Titulo, multi[index + 1].Titulo) < 0)
+                    {
+                        var temp = multi[index];
+                        multi[index] = multi[index + 1];
+                        multi[index + 1] = temp;
+                        swap = true;
+                    }
+
+                }
+            } while (swap == true);
         }
     }
 }
