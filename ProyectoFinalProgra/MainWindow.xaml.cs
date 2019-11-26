@@ -172,7 +172,14 @@ namespace ProyectoFinalProgra
             var usuario = ((visualizar)(gridN.Children[0]));
             var clase = multi[list.SelectedIndex];
 
-            usuario.lbltitulo = clase.Titulo.Text;
+            clase.Titulo = usuario.lbltitulo.Text;
+            clase.Sinopsis = usuario.lblsinopsis.Text;
+            clase.Temporadas = usuario.lbltemporadas.Text;
+            clase.Ranting = usuario.lblrating.Text;
+            clase.Productor = usuario.lblproduccion.Text;
+            clase.Descripcion = usuario.lblsinopsis.Text;
+
+            list.Items.Refresh();
 
 
            }
