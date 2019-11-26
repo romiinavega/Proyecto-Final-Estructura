@@ -7,24 +7,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid x:Name="gridvisalizar" HorizontalAlignment="Left" Height="440" Margin="0,10,0,0" VerticalAlignment="Top" Width="780">
+        <Grid x:Name="gridvisalizar" HorizontalAlignment="Left" Height="440" Margin="51,0,-31,0" VerticalAlignment="Top" Width="780">
             <Label Content="Editar elemento " HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="34" Width="175" FontSize="18"/>
-            <TextBox x:Name="lblaño" HorizontalAlignment="Left" Height="19" Margin="41,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72"/>
-            <TextBlock HorizontalAlignment="Left" Margin="165,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Tipo"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="lblaño" HorizontalAlignment="Left" Height="19" Margin="56,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
             <TextBlock HorizontalAlignment="Left" Margin="12,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Año"/><Run Text=":"/></TextBlock>
             <TextBlock x:Name="descripcion" Margin="12,88,0,0" TextWrapping="Wrap" Text="Descripcion:" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox x:Name="lblsinopsis" HorizontalAlignment="Left" Margin="12,113,0,279" TextWrapping="Wrap" Width="319"/>
-            <TextBlock HorizontalAlignment="Left" Margin="165,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51"><Run FontWeight="Bold" Text="Genero"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="lblgenero" HorizontalAlignment="Left" Height="16" Margin="234,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113"/>
-            <TextBlock HorizontalAlignment="Left" Margin="165,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"><Run FontWeight="Bold" Text="Temporadas"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="lbltemporadas" HorizontalAlignment="Left" Height="20" Margin="246,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.5,0.5"/>
-            <TextBlock x:Name="produccion" HorizontalAlignment="Left" Margin="140,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Produccion"/><Run Text="/"/><Run FontWeight="Bold" Text="Direccion"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="lblproduccion" HorizontalAlignment="Left" Height="21" Margin="276,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122"/>
-            <TextBlock HorizontalAlignment="Left" Margin="12,166,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Width="52" FontWeight="Bold"/>
+            <TextBox x:Name="lblsinopsis" HorizontalAlignment="Left" Margin="12,112,0,285" TextWrapping="Wrap" Width="387"/>
+            <TextBlock HorizontalAlignment="Left" Margin="165,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="19"><Run FontWeight="Bold" Text="Genero"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="lblgenero" HorizontalAlignment="Left" Height="22" Margin="237,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+            <TextBlock HorizontalAlignment="Left" Margin="159,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"><Run FontWeight="Bold" Text="Temporadas"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="lbltemporadas" HorizontalAlignment="Left" Height="20" Margin="237,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" RenderTransformOrigin="0.503,-0.033"/>
+            <TextBlock x:Name="produccion" HorizontalAlignment="Left" Margin="102,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Produccion"/><Run Text="/"/><Run FontWeight="Bold" Text="Direccion"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="lblproduccion" HorizontalAlignment="Left" Height="21" Margin="237,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" RenderTransformOrigin="0.26,0.667"/>
+            <TextBlock HorizontalAlignment="Left" Margin="12,160,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Width="52" FontWeight="Bold"/>
             <TextBox x:Name="lbltitulo"  HorizontalAlignment="Left" Height="22" Margin="56,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
             <TextBlock HorizontalAlignment="Left" Margin="12,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Titulo"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="lblrating" HorizontalAlignment="Left" Height="25" Margin="69,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+            <TextBox x:Name="lblrating" HorizontalAlignment="Left" Height="25" Margin="69,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
             <Button Visibility="Hidden" Content="Button" HorizontalAlignment="Left" Margin="165,214,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+            <ComboBox Name="cbrating" HorizontalAlignment="Left" Margin="131,160,0,0" VerticalAlignment="Top" Width="95" Height="25" RenderTransformOrigin="0.635,0.773">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+            </ComboBox>
         </Grid>
 
     </Grid>

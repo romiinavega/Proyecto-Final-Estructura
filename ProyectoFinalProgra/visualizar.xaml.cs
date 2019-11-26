@@ -30,6 +30,7 @@ namespace ProyectoFinalProgra
             lblsinopsis.IsEnabled = false;
             lbltemporadas.IsEnabled = false;
             lbltitulo.IsEnabled = false;
+           cbrating.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

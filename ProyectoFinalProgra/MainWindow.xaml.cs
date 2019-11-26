@@ -198,6 +198,7 @@ namespace ProyectoFinalProgra
             ((visualizar)(gridN.Children[0])).lbltemporadas.Text = multi[list.SelectedIndex].Temporadas;
             ((visualizar)(gridN.Children[0])).lblrating.Text = multi[list.SelectedIndex].Ranting;
             ((visualizar)(gridN.Children[0])).lblaño.Text = multi[list.SelectedIndex].Año.ToString();
+            ((visualizar)(gridN.Children[0])).cbrating.Text = multi[list.SelectedIndex].Ranting;
 
             ((visualizar)(gridN.Children[0])).lbltitulo.IsEnabled = true;
             ((visualizar)(gridN.Children[0])).lblsinopsis.IsEnabled = true;
@@ -206,10 +207,11 @@ namespace ProyectoFinalProgra
             ((visualizar)(gridN.Children[0])).lblproduccion.IsEnabled = true;
             ((visualizar)(gridN.Children[0])).lblgenero.IsEnabled = true;
             ((visualizar)(gridN.Children[0])).lbltemporadas.IsEnabled = true;
-            ((visualizar)(gridN.Children[0])).lblrating.IsEnabled = true;
             ((visualizar)(gridN.Children[0])).lblaño.IsEnabled = true;
+            ((visualizar)(gridN.Children[0])).cbrating.IsEnabled = true;
             actualizar.Visibility = Visibility.Visible;
-            
+            ((visualizar)(gridN.Children[0])).lblrating.Visibility = Visibility.Hidden;
+
         }
 
         private void actualizar_Click(object sender, RoutedEventArgs e)
@@ -223,7 +225,7 @@ namespace ProyectoFinalProgra
             clase.Titulo = usuario.lbltitulo.Text;
             clase.Sinopsis = usuario.lblsinopsis.Text;
             clase.Temporadas = usuario.lbltemporadas.Text;
-            clase.Ranting = usuario.lblrating.Text;
+            clase.Ranting = usuario.cbrating.Text;
             clase.Productor = usuario.lblproduccion.Text;
             clase.Descripcion = usuario.lblsinopsis.Text;
 
