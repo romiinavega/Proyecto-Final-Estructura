@@ -20,7 +20,7 @@ namespace ProyectoFinalProgra
     /// </summary>
     public partial class Pelicula : UserControl
     {
-        
+       
         public Pelicula()
         {
             InitializeComponent();

@@ -8,7 +8,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid x:Name="gridvisalizar" HorizontalAlignment="Left" Height="440" Margin="51,0,-31,0" VerticalAlignment="Top" Width="780">
-            <Label Content="Editar elemento " HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="34" Width="175" FontSize="18"/>
+            <TextBlock Visibility="Hidden" x:Name="restriccion" HorizontalAlignment="Left" Margin="250,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="41"><Run Text="*"/><Run Text="Se deben de llenar todos"/><LineBreak/><Run Text=" los campos para continuar"/></TextBlock>
+            <Label Content="Visualzar/Editar elemento " HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="34" Width="222" FontSize="18"/>
             <TextBox x:Name="lblaño" HorizontalAlignment="Left" Height="19" Margin="56,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
             <TextBlock HorizontalAlignment="Left" Margin="12,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Año"/><Run Text=":"/></TextBlock>
             <TextBlock x:Name="descripcion" Margin="12,88,0,0" TextWrapping="Wrap" Text="Descripcion:" VerticalAlignment="Top" FontWeight="Bold"/>
