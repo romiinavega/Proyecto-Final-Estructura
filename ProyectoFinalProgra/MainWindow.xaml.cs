@@ -25,16 +25,15 @@ namespace ProyectoFinalProgra
         public MainWindow()
         {
             InitializeComponent();
-            multi.Add(new Multimedia("Hola", 2010, "miedo", "sinopsis11", "1", "hola", "3"));
-            multi.Add(new Multimedia("Si", 2015, "terror", "sinopsis2", "2", "adios", "3"));
-            multi.Add(new Multimedia("Adios", 2020, "terror", "sinopsis3", "3", "si", "1"));
+            multi.Add(new Multimedia("It", 2010, "Miedo", "Un payaso que asusta", "Stephen King", "0", "3"));
+            multi.Add(new Multimedia("Titanic", 2000, "Amor", "Un barco se unde","0", "Un director muy padre", "5"));
+            multi.Add(new Multimedia("Casa de papel", 2016, "Drama", "Roban un banco", "3", "No se que productor es", "5"));
             list.ItemsSource = multi;
             estrella1.Visibility = Visibility.Hidden;
             estrella2.Visibility = Visibility.Hidden;
             estrella3.Visibility = Visibility.Hidden;
             estrella4.Visibility = Visibility.Hidden;
-            estrella5.Visibility = Visibility.Hidden;
-
+            estrella5.Visibility = Visibility.Hidden; 
 
 
 
