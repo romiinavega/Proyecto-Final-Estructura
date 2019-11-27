@@ -36,6 +36,6 @@
         <RadioButton Visibility="Hidden" x:Name="rbpelicula" Content="Pelicula" HorizontalAlignment="Left" Margin="431,29,0,0" VerticalAlignment="Top"   Checked="RdbtnPelicula_Checked"  />
         <RadioButton Visibility="Hidden" x:Name="rbserie" Content="Serie" HorizontalAlignment="Left" Margin="512,29,0,0" VerticalAlignment="Top" Checked="RdbtnSerie_Checked"  />
         <Button x:Name="guardar" Visibility="Hidden" Content="Guardar" HorizontalAlignment="Left" Margin="570,320,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.107,1.85" Click="Button_Click"/>
-
+        <TextBlock Visibility="Hidden" x:Name="restriccion" HorizontalAlignment="Left" Margin="448,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="41"><Run Text="*"/><Run Text="Se deben de llenar todos"/><LineBreak/><Run Text=" los campos para continuar"/></TextBlock>
     </Grid>
 </Window>

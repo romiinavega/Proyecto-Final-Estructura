@@ -25,9 +25,10 @@ namespace ProyectoFinalProgra
         public MainWindow()
         {
             InitializeComponent();
-            multi.Add(new Multimedia("It", 2010, "Miedo", "Un payaso que asusta", "Stephen King", "0", "3"));
-            multi.Add(new Multimedia("Titanic", 2000, "Amor", "Un barco se unde","0", "Un director muy padre", "5"));
+            multi.Add(new Multimedia("Mama", 2010, "Miedo", "Una mama que asusta", "3", "Un productor cool", "3"));
+            multi.Add(new Multimedia("Hamburguesas", 2000, "Amor", "Comida rica", "1", "Un director muy padre", "5"));
             multi.Add(new Multimedia("Casa de papel", 2016, "Drama", "Roban un banco", "3", "No se que productor es", "5"));
+            multi.Add(new Multimedia("Game of thrones", 2011, "Drama", "Basada en los libros de George R.R. Martin, muestra la competencia entre familias nobles de siete reinos de Westeros,", "9", "No se que productor es", "5"));
             list.ItemsSource = multi;
             estrella1.Visibility = Visibility.Hidden;
             estrella2.Visibility = Visibility.Hidden;
@@ -248,8 +249,48 @@ namespace ProyectoFinalProgra
 
         private void actualizar_Click(object sender, RoutedEventArgs e)
         {
+            if (((visualizar)(gridN.Children[0])).lbltitulo.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblaño.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblsinopsis.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblproduccion.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblgenero.Text == string.Empty || ((visualizar)(gridN.Children[0])).cbrating.Text == string.Empty)
+            {
+                restriccion.Visibility = Visibility.Visible;
+            }
+            else
+            {
 
-            var usuario = ((visualizar)(gridN.Children[0]));
+                gridN.Children.Add(new visualizar());
+                var maruchan = ((visualizar)(gridN.Children[0]));
+                var pan = multi[list.SelectedIndex];
+                var año = pan.Año.ToString();
+                var sopa = Convert.ToInt32(((visualizar)(gridN.Children[0])).lblaño.Text);
+
+                pan.Año = sopa;
+
+                pan.Titulo = maruchan.lbltitulo.Text;
+                pan.Sinopsis = maruchan.lblsinopsis.Text;
+                pan.Temporadas = maruchan.lbltemporadas.Text;
+                pan.Productor = maruchan.lblproduccion.Text;
+                pan.Genero = maruchan.lblgenero.Text;
+                pan.Ranting = maruchan.cbrating.Text;
+
+                restriccion.Visibility = Visibility.Hidden;
+                list.Items.Refresh();
+                gridN.Children.Clear();
+                cancelar.Visibility = Visibility.Hidden;
+                eliminar.Visibility = Visibility.Hidden;
+                editar.Visibility = Visibility.Hidden;
+                actualizar.Visibility = Visibility.Hidden;
+                nuevoelemento.Visibility = Visibility.Visible;
+                estrella1.Visibility = Visibility.Hidden;
+                estrella2.Visibility = Visibility.Hidden;
+                estrella3.Visibility = Visibility.Hidden;
+                estrella4.Visibility = Visibility.Hidden;
+                estrella5.Visibility = Visibility.Hidden;
+                botonN1.Visibility = Visibility.Visible;
+                botonN2.Visibility = Visibility.Visible;
+                botonL1.Visibility = Visibility.Visible;
+                botonL2.Visibility = Visibility.Visible;
+            }
+
+          /*  var usuario = ((visualizar)(gridN.Children[0]));
             var clase = multi[list.SelectedIndex];
             var año = clase.Año.ToString();
             var año2 = Convert.ToInt32(((visualizar)(gridN.Children[0])).lblaño.Text);
@@ -273,11 +314,11 @@ namespace ProyectoFinalProgra
             botonN2.Visibility = Visibility.Visible;
             botonL1.Visibility = Visibility.Visible;
             botonL2.Visibility = Visibility.Visible;
-            cancelar.Visibility = Visibility.Hidden;
+           cancelar.Visibility = Visibility.Hidden;
             eliminar.Visibility = Visibility.Hidden;
             editar.Visibility = Visibility.Hidden;
             actualizar.Visibility = Visibility.Hidden;
-            nuevoelemento.Visibility = Visibility.Visible;
+            nuevoelemento.Visibility = Visibility.Visible;*/
         }
 
         private void botonL1_Click(object sender, RoutedEventArgs e)
@@ -304,7 +345,7 @@ namespace ProyectoFinalProgra
 
         private void guardar_Click(object sender, RoutedEventArgs e)
         {
-
+            
             var usuario = ((Serie)(gridN.Children[0]));
             var clase = multi[list.SelectedIndex];
 
@@ -407,23 +448,35 @@ namespace ProyectoFinalProgra
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var año = ((Nuevo_elemento)(gridN.Children[0])).lblaño.Text;
-            int año2 = int.Parse(año);
-            string temporadass = "no aplica";
+            
+            if (((Nuevo_elemento)(gridN.Children[0])).lbltitulo.Text == string.Empty || ((Nuevo_elemento)(gridN.Children[0])).lblaño.Text == string.Empty || ((Nuevo_elemento)(gridN.Children[0])).lblsinopsis.Text == string.Empty || ((Nuevo_elemento)(gridN.Children[0])).lblproductor.Text == string.Empty || ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text == string.Empty || ((Nuevo_elemento)(gridN.Children[0])).cbrating.Text == string.Empty)
+            {
+                restriccion.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                var año = ((Nuevo_elemento)(gridN.Children[0])).lblaño.Text;
+                int año2 = int.Parse(año);
 
-            multi.Add(new Multimedia(((Nuevo_elemento)(gridN.Children[0])).lbltitulo.Text, año2, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblproductor.Text, ((Nuevo_elemento)(gridN.Children[0])).lblsinopsis.Text, ((Nuevo_elemento)(gridN.Children[0])).cbrating.Text));
+                multi.Add(new Multimedia(((Nuevo_elemento)(gridN.Children[0])).lbltitulo.Text, año2, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblproductor.Text, ((Nuevo_elemento)(gridN.Children[0])).lblsinopsis.Text, ((Nuevo_elemento)(gridN.Children[0])).cbrating.Text));
+                guardar.Visibility = Visibility.Hidden;
+                cancelar.Visibility = Visibility.Hidden;
+                gridN.Children.Clear();
+                botonN1.Visibility = Visibility.Visible;
+                botonN2.Visibility = Visibility.Visible;
+                botonL1.Visibility = Visibility.Visible;
+                botonL2.Visibility = Visibility.Visible;
+                rbserie.Visibility = Visibility.Hidden;
+                rbpelicula.Visibility = Visibility.Hidden;
+                lblTipo.Visibility = Visibility.Hidden;
+                list.Items.Refresh();
+            }
 
-            guardar.Visibility = Visibility.Hidden;
-            cancelar.Visibility = Visibility.Hidden;
-            gridN.Children.Clear();
-            botonN1.Visibility = Visibility.Visible;
-            botonN2.Visibility = Visibility.Visible;
-            botonL1.Visibility = Visibility.Visible;
-            botonL2.Visibility = Visibility.Visible;
-            rbserie.Visibility = Visibility.Hidden;
-            rbpelicula.Visibility = Visibility.Hidden;
-            lblTipo.Visibility = Visibility.Hidden;
-            list.Items.Refresh();
+
+
+
+
+           
 
         }
     }
