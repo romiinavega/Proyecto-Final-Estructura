@@ -249,7 +249,7 @@ namespace ProyectoFinalProgra
 
         private void actualizar_Click(object sender, RoutedEventArgs e)
         {
-            if (((visualizar)(gridN.Children[0])).lbltitulo.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblaño.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblsinopsis.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblproduccion.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblgenero.Text == string.Empty || ((visualizar)(gridN.Children[0])).cbrating.Text == string.Empty)
+            if (((visualizar)(gridN.Children[0])).lbltitulo.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblaño.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblsinopsis.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblsinopsis.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblproduccion.Text == string.Empty || ((visualizar)(gridN.Children[0])).lblgenero.Text == string.Empty || ((visualizar)(gridN.Children[0])).cbrating.Text == string.Empty)
             {
                 restriccion.Visibility = Visibility.Visible;
             }
@@ -266,6 +266,7 @@ namespace ProyectoFinalProgra
 
                 pan.Titulo = maruchan.lbltitulo.Text;
                 pan.Sinopsis = maruchan.lblsinopsis.Text;
+                pan.Descripcion = maruchan.lblsinopsis.Text;
                 pan.Temporadas = maruchan.lbltemporadas.Text;
                 pan.Productor = maruchan.lblproduccion.Text;
                 pan.Genero = maruchan.lblgenero.Text;
