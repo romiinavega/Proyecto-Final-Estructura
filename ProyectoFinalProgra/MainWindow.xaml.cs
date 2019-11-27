@@ -43,6 +43,10 @@ namespace ProyectoFinalProgra
 
         private void nuevoelemento_Click(object sender, RoutedEventArgs e)
         {
+            guardar.Visibility = Visibility.Visible;
+            lblTipo.Visibility = Visibility.Visible;
+            rbpelicula.Visibility = Visibility.Visible;
+            rbserie.Visibility = Visibility.Visible;
             gridN.Children.Clear();
             gridN.Children.Add(new Nuevo_elemento());
             cancelar.Visibility = Visibility.Visible;
@@ -117,6 +121,7 @@ namespace ProyectoFinalProgra
 
         private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             nuevoelemento.Visibility = Visibility.Hidden;
             if (list.SelectedIndex != -1)
             {
@@ -336,7 +341,7 @@ namespace ProyectoFinalProgra
             cancelar.Visibility = Visibility.Hidden;
             eliminar.Visibility = Visibility.Hidden;
             editar.Visibility = Visibility.Hidden;
-            // guardar.Visibility = Visibility.Hidden;
+            guardar.Visibility = Visibility.Hidden;
 
         }
 
@@ -362,6 +367,66 @@ namespace ProyectoFinalProgra
             } while (swap == true);
         }
 
+        private void RdbtnPelicula_Checked(object sender, RoutedEventArgs e)
+        {
+            
+            cancelar.Visibility = Visibility.Visible;
+            eliminar.Visibility = Visibility.Hidden;
+            editar.Visibility = Visibility.Hidden;
+            estrella1.Visibility = Visibility.Hidden;
+            estrella2.Visibility = Visibility.Hidden;
+            estrella3.Visibility = Visibility.Hidden;
+            estrella4.Visibility = Visibility.Hidden;
+            estrella5.Visibility = Visibility.Hidden;
+
+            gridN.Children.Clear();
+            gridN.Children.Add(new Nuevo_elemento());
+            ((Nuevo_elemento)(gridN.Children[0])).cbtemporadas.Visibility = Visibility.Hidden;
+            ((Nuevo_elemento)(gridN.Children[0])).lbltemporada1.Visibility = Visibility.Hidden;
+           
+        }
+
+        private void RdbtnSerie_Checked(object sender, RoutedEventArgs e)
+        {
+            guardar.Visibility = Visibility.Visible;
+            cancelar.Visibility = Visibility.Visible;
+            eliminar.Visibility = Visibility.Hidden;
+            editar.Visibility = Visibility.Hidden;
+            estrella1.Visibility = Visibility.Hidden;
+            estrella2.Visibility = Visibility.Hidden;
+            estrella3.Visibility = Visibility.Hidden;
+            estrella4.Visibility = Visibility.Hidden;
+            estrella5.Visibility = Visibility.Hidden;
+            gridN.Children.Clear();
+            gridN.Children.Add(new Nuevo_elemento());
+            ((Nuevo_elemento)(gridN.Children[0])).cbtemporadas.Visibility = Visibility.Visible;
+            ((Nuevo_elemento)(gridN.Children[0])).lbltemporada1.Visibility = Visibility.Visible;
+
+            eliminar.Visibility = Visibility.Hidden;
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var año = ((Nuevo_elemento)(gridN.Children[0])).lblaño.Text;
+            int año2 = int.Parse(año);
+            string temporadass = "no aplica";
+
+            multi.Add(new Multimedia(((Nuevo_elemento)(gridN.Children[0])).lbltitulo.Text, año2, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblgenero.Text, ((Nuevo_elemento)(gridN.Children[0])).lblproductor.Text, ((Nuevo_elemento)(gridN.Children[0])).lblsinopsis.Text, ((Nuevo_elemento)(gridN.Children[0])).cbrating.Text));
+
+            guardar.Visibility = Visibility.Hidden;
+            cancelar.Visibility = Visibility.Hidden;
+            gridN.Children.Clear();
+            botonN1.Visibility = Visibility.Visible;
+            botonN2.Visibility = Visibility.Visible;
+            botonL1.Visibility = Visibility.Visible;
+            botonL2.Visibility = Visibility.Visible;
+            rbserie.Visibility = Visibility.Hidden;
+            rbpelicula.Visibility = Visibility.Hidden;
+            lblTipo.Visibility = Visibility.Hidden;
+            list.Items.Refresh();
+
+        }
     }
 }
 

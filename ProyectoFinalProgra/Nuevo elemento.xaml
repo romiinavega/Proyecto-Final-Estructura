@@ -7,18 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="Agregar nuevo elemento:" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Height="37" Width="238" FontFamily="Segoe UI Emoji"/>
-        <RadioButton Content="Pelicula" HorizontalAlignment="Left" Margin="56,35,0,0" VerticalAlignment="Top" Height="15" Width="69" Checked="RadioButton_Checked"/>
-        <RadioButton Content="Serie" HorizontalAlignment="Left" Margin="146,35,0,0" VerticalAlignment="Top" Width="65" Height="20" Checked="RadioButton_Checked_1"/>
-        <Grid x:Name="gridN" HorizontalAlignment="Left" Height="438" Margin="2,2,0,0" VerticalAlignment="Top" Width="788">
-            <Grid x:Name="gridserieypeli" HorizontalAlignment="Left" Height="375" Margin="10,54,-314,-212" VerticalAlignment="Top" Width="769">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="79*"/>
-                    <RowDefinition Height="74*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-        </Grid>
-        <Label Content="Tipo:" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Height="29" Width="36" FontFamily="Segoe UI Emoji"/>
+        <Label Content="Agregar nuevo elemento:" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Height="37" Width="238" FontFamily="Segoe UI Emoji"/>
+        <Grid x:Name="gridN" HorizontalAlignment="Left" Height="438" Margin="2,2,0,0" VerticalAlignment="Top" Width="788"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,64,0,0" TextWrapping="Wrap" Text="Titulo:" VerticalAlignment="Top" Width="36" Height="15"/>
+        <TextBox x:Name="lbltitulo" HorizontalAlignment="Left" Height="21" Margin="66,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="378"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,100,0,0" TextWrapping="Wrap" Text="Año:" VerticalAlignment="Top" Width="28" Height="16"/>
+        <TextBox x:Name="lblaño" HorizontalAlignment="Left" Height="23" Margin="86,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <TextBlock HorizontalAlignment="Left" Margin="175,103,0,0" TextWrapping="Wrap" Text="Género" VerticalAlignment="Top" Width="48" Height="16"/>
+        <ComboBox x:Name="cbtemporadas" HorizontalAlignment="Left" Height="21" Margin="392,132,0,0" VerticalAlignment="Top" Width="42">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="lblgenero" HorizontalAlignment="Left" Margin="228,99,0,0" VerticalAlignment="Top" Width="216" Height="21"/>
+        <TextBlock x:Name="lbltemporada1" HorizontalAlignment="Left" Margin="312,134,0,0" TextWrapping="Wrap" Text="Temporadas:" VerticalAlignment="Top" Width="74" Height="15"/>
+        <TextBox x:Name="lblproductor" HorizontalAlignment="Left" Height="21" Margin="86,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" Text="Productor:" VerticalAlignment="Top" Width="68" Height="15"/>
+        <TextBox x:Name="lblsinopsis" HorizontalAlignment="Left" Height="38" Margin="90,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,168,0,0" TextWrapping="Wrap" Text="Descripción:" VerticalAlignment="Top" Width="70" Height="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="36,218,0,0" TextWrapping="Wrap" Text="Rating: " VerticalAlignment="Top" Width="70" Height="23"/>
+        <ComboBox x:Name="cbrating" HorizontalAlignment="Left" Height="21" Margin="106,220,0,0"  VerticalAlignment="Top" Width="34">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+
+
 
     </Grid>
 </UserControl>

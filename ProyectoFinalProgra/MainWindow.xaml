@@ -32,6 +32,10 @@
         <Image x:Name="estrella3" Visibility="Hidden" Margin="276,262,385,135" Source="3.png" Stretch="Fill"/>
         <Image x:Name="estrella4" Visibility="Hidden" Margin="271,262,390,135" Source="4.png" Stretch="Fill"/>
         <Image x:Name="estrella5" Visibility="Hidden" Margin="276,262,385,135" Source="5.png" Stretch="Fill"/>
+        <Label Visibility="Hidden" x:Name="lblTipo" Content="Tipo" HorizontalAlignment="Left" Margin="390,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Visibility="Hidden" x:Name="rbpelicula" Content="Pelicula" HorizontalAlignment="Left" Margin="431,29,0,0" VerticalAlignment="Top"   Checked="RdbtnPelicula_Checked"  />
+        <RadioButton Visibility="Hidden" x:Name="rbserie" Content="Serie" HorizontalAlignment="Left" Margin="512,29,0,0" VerticalAlignment="Top" Checked="RdbtnSerie_Checked"  />
+        <Button x:Name="guardar" Visibility="Hidden" Content="Guardar" HorizontalAlignment="Left" Margin="570,320,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.107,1.85" Click="Button_Click"/>
 
     </Grid>
 </Window>

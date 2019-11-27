@@ -28,14 +28,12 @@ namespace ProyectoFinalProgra
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            gridserieypeli.Children.Clear();
-            gridserieypeli.Children.Add(new Pelicula());
+            
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            gridserieypeli.Children.Clear();
-            gridserieypeli.Children.Add(new Serie());
+          
         }
     }
 }
